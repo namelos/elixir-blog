@@ -1,18 +1,19 @@
 const path = require('path')
+
 const webpack = require('webpack')
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    './web/static/js/app.js'
+    './web/static/js/index.js'
   ],
   output: {
     path: path.join(__dirname, 'priv/static/js'),
     filename: 'app.js',
-    publicPath: 'http://localhost:8080/'
+    publicPath: 'http://localhost:3000/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

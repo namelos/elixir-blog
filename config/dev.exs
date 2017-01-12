@@ -11,7 +11,7 @@ config :blog, Blog.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/.bin/webpack-dev-server", "--inline", "--hot", "--stdin", "--host", "localhost", "--port", "8080", "--public", "localhost:8080"]]
+  watchers: [node: ["server.js"]]
 
 
 # Watch static and templates for browser reloading.
