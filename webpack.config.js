@@ -21,10 +21,15 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      loader: 'babel-loader',
+      use: [{
+        loader: 'babel-loader',
+      }],
       include: path.join(__dirname, 'web/static/js')
     }]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   }
 }
