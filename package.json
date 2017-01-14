@@ -44,9 +44,9 @@
     "redux-saga": "^0.14.2"
   },
   "ava": {
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
+    "require": "babel-register",
+    "babel": {
+      "babelrc": true
+    }
   }
 }
