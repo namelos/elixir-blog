@@ -1,7 +1,7 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './Root';
+import Root from './config/Root';
 
 const rootEl = document.getElementById('app');
 
@@ -13,10 +13,10 @@ ReactDOM.render(
 );
 
 if (module.hot) {
-  module.hot.accept('./Root', () => {
+  module.hot.accept('./config/Root', () => {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
-    const NextRoot = require('./Root').default;
+    const NextRoot = require('./config/Root').default;
     ReactDOM.render(
       <AppContainer>
         <NextRoot />
