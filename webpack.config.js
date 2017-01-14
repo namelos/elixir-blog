@@ -3,24 +3,21 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  devtool: 'eval-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    'react-hot-loader/patch',
-    './web/static/js/index.js'
-  ],
+  entry: './web/static/js/index.js',
   output: {
     path: path.join(__dirname, 'priv/static/js'),
     filename: 'app.js',
-    publicPath: 'http://localhost:3000/'
+    publicPath: '/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+        screw_ie8: true
+      }
+    }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
   module: {

@@ -6,7 +6,7 @@
     "start": "mix phoenix.server",
     "test": "node_modules/.bin/ava",
     "watch": "node_modules/.bin/ava --watch",
-    "build": "node_modules/.bin/webpack --config ./webpack.prod.config.js --progress --profile --colors"
+    "build": "node_modules/.bin/webpack --progress --profile --colors"
   },
   "repository": {
     "url": "https://github.com/namelos/elixir-blog",
