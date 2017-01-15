@@ -35,12 +35,16 @@
     "webpack-dev-server": "v2.2.0-rc.0"
   },
   "dependencies": {
+    "draft-js": "^0.9.1",
+    "immutable": "^3.8.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
+    "redux-form": "^6.4.3",
+    "redux-logger": "^2.7.4",
     "redux-saga": "^0.14.2"
   },
   "ava": {
